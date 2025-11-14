@@ -202,8 +202,6 @@ function updateStats() {
         }   
     })
     
-    
-
     // 4.4 UPDATE THE DOM
     totalGoalsSpan.textContent = total;
     completedGoalsSpan.textContent = completedCount;    
