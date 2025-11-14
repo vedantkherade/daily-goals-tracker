@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Goals Tracker</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Main wrapper just to center the app -->
+    <div class="app-wrapper">
+        <!-- Card that contains the whole app UI -->
+        <main class="app-card">
+            <!-- HEADER SECTION -->
+            <header class="app-header">
+                <h1>Daily Goals Tracker</h1>
+                <p class="subtitle">
+                    Plan your day, track your goals, and stay consistent.
+                </p>
+            </header>
+
+            <!-- STATS SECTION: JS will update these numbers -->
+            <section class="stats-section">
+                <!-- Total goals count (JS will change the numbers) -->
+                <div class="stat-box">
+                    <span class="stat-label">Total Goals:</span>
+                    <!-- JS will update this span -->
+                    <span id="total-goals" class="stat-value">0</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">Completed:</span>
+                    <!-- JS will update this span -->
+                    <span id="completed-goals" class="stat-value">0</span>
+                </div>
+            </section>
+
+            <!-- FORM SECTION: User will add a new goal from here -->
+            <section class="form-section">
+                <!-- Text input for goal title -->
+                <label for="goal-input" class="form-label">Goal Title</label>
+                <input type="text" id="goal-input" class="text-input" placeholder="E.g. Study JavaScript for 1 hour" />
+
+                <!-- Priority dropdown (Low / Medium / High) -->
+                <label for="priority-select" class="form-label">Priority</label>
+                <select id="priority-select" class="select-input">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <!-- Button to add new goal (JS will handle the click) -->
+                <button id="add-goal-btn" class="primary-btn">
+                    Add Goal
+                </button>
+
+                <!-- Small message area for future use if needed -->
+                <p class="helper-text">
+                    Tip: Keep your goals small and realistic. Finish them one by one!
+                </p>
+            </section>
+
+            <!-- LIST SECTION: JS will create list items and insert here -->
+            <section class="list-section">
+                <h2 class="section-title">Today's Goals</h2>
+
+                <!-- Unordered list for goals. JS will add <li> here. -->
+                <ul id="goal-list" class="goal-list">
+                    <!-- Example item (for your reference only; keep it commented)
+          <li class="goal-item">
+            <div class="goal-main">
+              <span class="goal-title">Walk for 20 minutes</span>
+              <span class="goal-tag goal-tag--medium">Medium</span>
+            </div>
+            <div class="goal-actions">
+              <button class="goal-btn done-btn">Done</button>
+              <button class="goal-btn delete-btn">Delete</button>
+            </div>
+          </li> -->
+         
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript file (all logic & TODOs will be inside this) -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+/* Basic reset for default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body: center the app and set background color */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    background: #f4f5fb;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper to limit max width */
+.app-wrapper {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Main card with shadow */
+.app-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Header styles */
+.app-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Stats section (Total / Completed) */
+.stats-section {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.4rem;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 140px;
+    background: #f8f9ff;
+    border-radius: 8px;
+    padding: 0.75rem 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.stat-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Form section styles */
+.form-section {
+    border-top: 1px solid #eee;
+    padding-top: 1.2rem;
+    margin-top: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.text-input,
+.select-input {
+    width: 100%;
+    padding: 0.55rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.text-input:focus,
+.select-input:focus {
+    outline: none;
+    border-color: #4c6fff;
+    box-shadow: 0 0 0 1px rgba(76, 111, 255, 0.25);
+}
+
+/* Main button */
+.primary-btn {
+    margin-top: 0.4rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #4c6fff;
+    color: #fff;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.primary-btn:hover {
+    background: #3d57cc;
+    transform: translateY(-1px);
+}
+
+.helper-text {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* List section */
+.list-section {
+    margin-top: 1.6rem;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Goal list and items */
+.goal-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* Single goal item row */
+.goal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background: #fafbff;
+}
+
+/* Container for title and priority tag */
+.goal-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Goal title text */
+.goal-title {
+    font-size: 0.95rem;
+}
+
+/* Priority badge */
+.goal-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 999px;
+    text-transform: capitalize;
+}
+
+/* Different colors for priority */
+.goal-tag--low {
+    background: #e3f7e3;
+    color: #1b7a1b;
+}
+
+.goal-tag--medium {
+    background: #fff3cc;
+    color: #b38309;
+}
+
+.goal-tag--high {
+    background: #ffe2e2;
+    color: #b32626;
+}
+
+/* Button container on right side of each item */
+.goal-actions {
+    display: flex;
+    gap: 0.4rem;
+}
+
+/* Buttons inside each goal row */
+.goal-btn {
+    border-radius: 6px;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Done button style */
+.done-btn {
+    background: #e3f3ff;
+    color: #1e5aa8;
+}
+
+/* Delete button style */
+.delete-btn {
+    background: #ffe9e9;
+    color: #b32626;
+}
+
+/* When a goal is completed, we will add this class from JS */
+.goal-item.completed .goal-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.goal-item.completed {
+    background: #f2f3f7;
+}
